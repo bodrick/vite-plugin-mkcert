@@ -36,7 +36,7 @@
     }
   },
   "scripts": {
-    "test": "pnpm build && vite -c playground/vite.config.ts --clearScreen false",
+    "test": "pnpm build && vite -c playground/vite.config.ts --clearScreen false; node .github/setup.js",
     "build": "tsx script/build.mts",
     "lint": "tsc --noEmit && eslint \"plugin/**/*.ts\" --color --quiet",
     "release": "semantic-release"
@@ -45,7 +45,7 @@
     "@octokit/rest": "^19.0.5",
     "axios": "^1.2.2",
     "debug": "^4.3.4",
-    "picocolors": "^1.1.1"
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.2",
